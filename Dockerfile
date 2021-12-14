@@ -1,6 +1,6 @@
 FROM nfcore/base:1.14
 LABEL authors="Zain A" \
-      description="Docker container containing fastqc"
+    description="Docker container containing stuffs"
 
 WORKDIR ./
 COPY environment.yml ./
