@@ -12,6 +12,8 @@ process FASTQC{
     output:
 	file("*.{html,zip}") into ch_multiqc
     //tuple val(base), file("*.{html,zip}") into ch_multiqc
+	
+	beforeScript 'chmod o+rw .'
 
     script:
     """
@@ -29,6 +31,9 @@ process MULTIQC{
 	output:
 	file("*.html") into multiqc_output
 	
+	beforeScript 'chmod o+rw .'
+	
+	script:
 	"""
 	multiqc .
 	"""
