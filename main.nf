@@ -113,6 +113,7 @@ process TX{
 */
 
 process INDEX{
+
     publishDir "${params.outdir}/index", mode: 'copy'
 
     input:
